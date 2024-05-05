@@ -5,6 +5,7 @@ function createGrid(size) {
         row.style.cssText = `
             display: flex; 
             justify-content: center;
+            max-width: 640px;
             flex: 1;
         `;
         container.appendChild(row);
@@ -12,7 +13,6 @@ function createGrid(size) {
             let div = document.createElement("div");
             div.style.cssText = `
                 flex: 1;
-                max-width: 40px;
                 aspect-ratio: 1/1;
                 border: 1px solid black;
             `;
@@ -23,4 +23,4 @@ function createGrid(size) {
         }
     }
 }
-createGrid(16);
+createGrid(10);
