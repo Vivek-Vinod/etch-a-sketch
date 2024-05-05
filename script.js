@@ -15,6 +15,9 @@ for (let i = 0; i < 16; i++) {
             aspect-ratio: 1/1;
             border: 1px solid black;
         `;
+        div.addEventListener("click", () => {
+            div.style.backgroundColor = "black";
+        })
         row.appendChild(div);
     }
 }
