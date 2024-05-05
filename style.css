@@ -2,3 +2,21 @@
     display: flex;
     flex-direction: column;
 }
+
+button {
+    background-color: rgb(209, 237, 186);
+    color: rgb(10, 10, 113);
+    padding: 16px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 800;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(189, 237, 149);;
+}
+
+button:active {
+    transform: translateY(1px);
+}

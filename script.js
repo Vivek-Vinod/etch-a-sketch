@@ -1,10 +1,13 @@
-const container = document.querySelector("#container");
+const DEFAULT_SIZE = 16;
+const body = document.querySelector("body");
 function createGrid(size) {
+    const container = document.createElement("div");
+    container.setAttribute("id", "container");
+    body.appendChild(container);
     for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
         row.style.cssText = `
             display: flex; 
-            justify-content: center;
             max-width: 640px;
             flex: 1;
         `;
@@ -23,4 +26,13 @@ function createGrid(size) {
         }
     }
 }
-createGrid(10);
+
+createGrid(DEFAULT_SIZE);
+
+const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+    const size = prompt("Grid Size: ");
+    const container = document.querySelector("#container");
+    container.remove();
+    createGrid(size);
+})
