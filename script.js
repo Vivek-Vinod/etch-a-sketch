@@ -32,7 +32,12 @@ createGrid(DEFAULT_SIZE);
 const btn = document.querySelector("button");
 btn.addEventListener("click", () => {
     const size = prompt("Grid Size: ");
-    const container = document.querySelector("#container");
-    container.remove();
-    createGrid(size);
+    if (size > 100) {
+        alert("Size must be less than 100");
+    }
+    else {
+        const container = document.querySelector("#container");
+        container.remove();
+        createGrid(size);
+    }
 })
